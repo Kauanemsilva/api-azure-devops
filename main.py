@@ -3,18 +3,34 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database import SessionLocal, User
 from azure.monitor.opentelemetry import configure_azure_monitor
+from opentelemetry import trace
 import os
 import logging
+from datetime import datetime
 
 # 🔥 Configura Azure Monitor (Application Insights)
-# Só funciona se tiver APPLICATIONINSIGHTS_CONNECTION_STRING no .env
+connection_string = os.environ.get("APPLICATIONINSIGHTS_CONNECTION_STRING")
+
 try:
-    connection_string = os.environ.get("APPLICATIONINSIGHTS_CONNECTION_STRING")
     if connection_string:
+        # Configurar Azure Monitor com OpenTelemetry
         configure_azure_monitor(connection_string=connection_string)
-        print("✓ Azure Monitor configurado")
+        
+        # Pegar tracer para rastreamento
+        tracer = trace.get_tracer(__name__)
+        
+        print("✓ Azure Monitor conectado com sucesso!")
+        print(f"✓ Enviando dados para Application Insights (Canada Central)")
+    else:
+        print("⚠ APPLICATIONINSIGHTS_CONNECTION_STRING não configurada no .env")
+        tracer = None
 except Exception as e:
-    print(f"⚠ Azure Monitor não configurado: {e}")
+    print(f"❌ Erro ao configurar Azure Monitor: {e}")
+    tracer = None
+
+# Configurar logging local para debug
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
@@ -40,23 +56,29 @@ def get_db():
 
 @app.get("/")
 def root():
+    logger.info("📍 GET / - Raiz da API")
     return {"message": "API rodando com FastAPI 🚀"}
 
 
 @app.get("/health")
 def health_check():
+    logger.info("❤️ Health Check - OK")
     return {"status": "ok"}
 
 
 @app.post("/users")
 def create_user(user: UserModel, db: Session = Depends(get_db)):
+    logger.info(f"👤 Criando usuário: {user.name} ({user.email})")
     db_user = User(name=user.name, email=user.email)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
+    logger.info(f"✅ Usuário criado com ID: {db_user.id}")
     return db_user
 
 
 @app.get("/users")
 def get_users(db: Session = Depends(get_db)):
-    return db.query(User).all()
+    users_list = db.query(User).all()
+    logger.info(f"📋 Listando {len(users_list)} usuários")
+    return users_list
