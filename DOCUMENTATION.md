@@ -573,15 +573,3 @@ async def get_users(request: Request, db: Session = Depends(get_db)):
     pass
 ```
 
----
-
-## Próximos Passos
-
-- [ ] Autenticação JWT
-- [ ] Rate limiting
-- [ ] Cache com Redis
-- [ ] WebSocket support
-- [ ] GraphQL API
-- [ ] Kubernetes deployment
-- [ ] Terraform IaC
-- [ ] Load testing com k6

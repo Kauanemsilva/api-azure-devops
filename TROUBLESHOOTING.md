@@ -647,7 +647,7 @@ Quando algo não funciona:
 
 ## Contato & Suporte
 
-- **GitHub Issues**: [Abrir issue](https://github.com/seu-usuario/api-azure-devops/issues)
+- **GitHub Issues**: [Abrir issue](https://github.com/Kauanemsilva/api-azure-devops)
 - **Azure Support**: https://portal.azure.com/#view/Microsoft_Azure_Support/NewSupportRequest
 - **FastAPI Docs**: https://fastapi.tiangolo.com/
 - **SQLAlchemy Docs**: https://docs.sqlalchemy.org/

@@ -9,6 +9,7 @@
 ## 🎯 Objetivo
 
 Projeto portfolio de **nível enterprise** demonstrando:
+
 - ✅ Desenvolvimento backend moderno (Python + FastAPI)
 - ✅ DevOps profissional (GitHub Actions + Azure)
 - ✅ Observabilidade de classe mundial (Application Insights)
@@ -20,6 +21,7 @@ Projeto portfolio de **nível enterprise** demonstrando:
 ## 📊 Status Real do Projeto
 
 ### ✅ Arquitetura
+
 ```
 Status: PRODUCTION
 - API containerizada ✅
@@ -29,6 +31,7 @@ Status: PRODUCTION
 ```
 
 ### ✅ Banco de Dados
+
 ```
 Status: OPERATIONAL
 - Azure SQL Database (Produção) ✅
@@ -38,6 +41,7 @@ Status: OPERATIONAL
 ```
 
 ### ✅ API REST
+
 ```
 Status: FUNCTIONAL
 - 4 Endpoints implementados ✅
@@ -47,6 +51,7 @@ Status: FUNCTIONAL
 ```
 
 ### ✅ Observabilidade
+
 ```
 Status: ATIVO
 - Logs estruturados ✅
@@ -58,6 +63,7 @@ Status: ATIVO
 ```
 
 ### ✅ Segurança
+
 ```
 Status: IMPLEMENTADO
 - Variáveis de ambiente seguras ✅
@@ -68,6 +74,7 @@ Status: IMPLEMENTADO
 ```
 
 ### ✅ DevOps
+
 ```
 Status: AUTOMATIZADO
 - GitHub Actions CI/CD ✅
@@ -82,6 +89,7 @@ Status: AUTOMATIZADO
 ## 📦 Stack Tecnológico
 
 ### Backend
+
 ```
 Language:  Python 3.10+
 Framework: FastAPI 0.131.0
@@ -91,6 +99,7 @@ Validate:  Pydantic 2.12.5
 ```
 
 ### Cloud Infrastructure
+
 ```
 Provider:     Microsoft Azure
 App Service:  Web App (Python 3.10)
@@ -100,6 +109,7 @@ Telemetry:    OpenTelemetry
 ```
 
 ### CI/CD
+
 ```
 VCS:          GitHub
 Automation:   GitHub Actions
@@ -113,21 +123,25 @@ Status:       ✅ Working
 ## 🌐 Endpoints da API
 
 ### 1. GET /
+
 **Função**: Root endpoint  
 **Response**: `{"message": "API rodando com FastAPI 🚀"}`  
 **Status**: ✅ Ativo
 
 ### 2. GET /health
+
 **Função**: Health check  
 **Response**: `{"status": "ok"}`  
 **Status**: ✅ Ativo
 
 ### 3. GET /users
+
 **Função**: Listar usuários  
 **Response**: Array de usuários  
 **Status**: ✅ Ativo
 
 ### 4. POST /users
+
 **Função**: Criar usuário  
 **Body**: `{"name": "...", "email": "..."}`  
 **Status**: ✅ Ativo
@@ -136,20 +150,21 @@ Status:       ✅ Working
 
 ## 📈 Métricas de Performance
 
-| Métrica | Valor | Target |
-|---------|-------|--------|
-| Response Time (P95) | ~150ms | < 500ms ✅ |
-| Error Rate | 0% | < 1% ✅ |
-| Availability | 99.8% | > 99% ✅ |
-| Requests/sec | 25+ | Unbounded ✅ |
-| CPU Usage | ~25% | < 70% ✅ |
-| Memory Usage | ~60% | < 80% ✅ |
+| Métrica             | Valor  | Target       |
+| ------------------- | ------ | ------------ |
+| Response Time (P95) | ~150ms | < 500ms ✅   |
+| Error Rate          | 0%     | < 1% ✅      |
+| Availability        | 99.8%  | > 99% ✅     |
+| Requests/sec        | 25+    | Unbounded ✅ |
+| CPU Usage           | ~25%   | < 70% ✅     |
+| Memory Usage        | ~60%   | < 80% ✅     |
 
 ---
 
 ## 🔄 Pipeline CI/CD
 
 ### Fluxo
+
 1. **Developer push** → git push origin main
 2. **Webhook triggers** → GitHub Actions
 3. **Build job** → Testa + compila (2 min)
@@ -157,11 +172,13 @@ Status:       ✅ Working
 5. **Resultado** → ✅ API online
 
 ### Tempo Total
+
 - Build: ~2 minutos
 - Deploy: ~3 minutos
 - Total: **~5 minutos**
 
 ### Downtime
+
 - **Zero** ✅ (Blue-Green deployment)
 
 ---
@@ -169,6 +186,7 @@ Status:       ✅ Working
 ## 📊 Monitoramento 24/7
 
 ### Application Insights
+
 ```
 Dados coletados:
 - Logs estruturados
@@ -179,6 +197,7 @@ Dados coletados:
 ```
 
 ### Azure Monitor Alerts
+
 ```
 Regras ativas:
 - High CPU (> 80%)
@@ -188,6 +207,7 @@ Regras ativas:
 ```
 
 ### Dashboard
+
 ```
 Disponível em:
 Azure Portal > Application Insights > [recurso]
@@ -231,6 +251,7 @@ api-azure-devops/
 ## 🚀 Como Começar
 
 ### Opção 1: Local (5 min)
+
 ```bash
 git clone <repo>
 cd api-azure-devops
@@ -241,6 +262,7 @@ python -m uvicorn main:app --reload
 ```
 
 ### Opção 2: Produção (automático)
+
 ```bash
 git push origin main
 # GitHub Actions faz todo o resto
@@ -252,40 +274,44 @@ git push origin main
 
 ## 📚 Documentação
 
-| Arquivo | Propósito | Público |
-|---------|-----------|---------|
-| **README.md** | Visão geral + Quick start | Todos |
-| **DOCUMENTATION.md** | Referência técnica completa | Devs |
-| **SETUP.md** | Setup local detalhado | Devs |
-| **ARCHITECTURE.md** | Design do sistema | Tech Leads |
-| **DEPLOYMENT.md** | Deploy & Automação | DevOps |
-| **MONITORING.md** | Observabilidade & Logs | DevOps/SRE |
-| **TROUBLESHOOTING.md** | Problemas & Soluções | Todos |
-| **INDEX.md** | Índice de navegação | Todos |
+| Arquivo                | Propósito                   | Público    |
+| ---------------------- | --------------------------- | ---------- |
+| **README.md**          | Visão geral + Quick start   | Todos      |
+| **DOCUMENTATION.md**   | Referência técnica completa | Devs       |
+| **SETUP.md**           | Setup local detalhado       | Devs       |
+| **ARCHITECTURE.md**    | Design do sistema           | Tech Leads |
+| **DEPLOYMENT.md**      | Deploy & Automação          | DevOps     |
+| **MONITORING.md**      | Observabilidade & Logs      | DevOps/SRE |
+| **TROUBLESHOOTING.md** | Problemas & Soluções        | Todos      |
+| **INDEX.md**           | Índice de navegação         | Todos      |
 
 ---
 
 ## ✨ Diferenciais do Projeto
 
 ✅ **Pronto para Portfolio**
+
 - Código limpo e profissional
 - Documentação completa
 - Está rodando em produção
 - Performance otimizada
 
 ✅ **Enterprise-Ready**
+
 - Segurança implementada
 - Observabilidade completa
 - Escalável automaticamente
 - Monitoramento 24/7
 
 ✅ **DevOps Automático**
+
 - CI/CD sem interferência
 - Deploy zero-downtime
 - Testes automáticos
 - Versionamento Git
 
 ✅ **Tecnologia Moderna**
+
 - Python 3.10+
 - FastAPI (async)
 - Azure (cloud enterprise)
@@ -298,6 +324,7 @@ git push origin main
 Estudando este projeto, você aprenderá:
 
 ### Backend
+
 - Python async/await
 - FastAPI moderno
 - SQLAlchemy ORM
@@ -305,6 +332,7 @@ Estudando este projeto, você aprenderá:
 - Error handling
 
 ### Cloud/DevOps
+
 - Azure Cloud
 - GitHub Actions
 - CI/CD pipelines
@@ -312,6 +340,7 @@ Estudando este projeto, você aprenderá:
 - Deployment strategies
 
 ### Observabilidade
+
 - Application Insights
 - Azure Monitor
 - Logging estruturado
@@ -319,79 +348,12 @@ Estudando este projeto, você aprenderá:
 - Query language (KQL)
 
 ### Boas Práticas
+
 - Clean Code
 - API design
 - Security
 - Testing
 - Documentation
-
----
-
-## 💼 Para Portfólio
-
-Este projeto é **ideal para portfolio** porque mostra:
-
-1. **Desenvolvimento Full-Stack**
-   - Backend moderno
-   - API REST profissional
-   - Database design
-
-2. **DevOps Professional**
-   - CI/CD automático
-   - Cloud deployment
-   - Infrastructure
-
-3. **Observabilidade**
-   - Logging & Monitoring
-   - Performance tracking
-   - Error handling
-
-4. **Best Practices**
-   - Clean code
-   - Documentation
-   - Security
-   - Testing
-
----
-
-## 🎯 Próximas Etapas
-
-### Curto Prazo
-- ✅ Projeto completo
-- ✅ Documentação 100%
-- ✅ Em produção
-
-### Médio Prazo
-- [ ] Autenticação JWT
-- [ ] Rate limiting
-- [ ] Caching com Redis
-- [ ] WebSocket support
-
-### Longo Prazo
-- [ ] GraphQL API
-- [ ] Kubernetes deployment
-- [ ] Multi-region deployment
-- [ ] Load testing (k6)
-
----
-
-## 📞 Suporte
-
-### Documentação Completa
-- 📖 [README.md](./README.md)
-- 🔍 [DOCUMENTATION.md](./DOCUMENTATION.md)
-- 🔧 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
-
-### Recursos
-- Fast API: https://fastapi.tiangolo.com/
-- Azure Docs: https://learn.microsoft.com/azure/
-- GitHub Actions: https://github.com/actions
-
-### Issues
-- GitHub: [Abrir issue](https://github.com/)
-- Azure Support: [Portal](https://portal.azure.com/)
-
----
 
 ## 📈 Estatísticas do Projeto
 
@@ -413,6 +375,7 @@ API Response Time:  ~150ms
 ## 🏆 Conclusão
 
 Este é um **projeto profissional completo** que demonstra excelência em:
+
 - ✅ Desenvolvimento backend
 - ✅ DevOps & cloud
 - ✅ Observabilidade
@@ -427,5 +390,4 @@ Este é um **projeto profissional completo** que demonstra excelência em:
 **Status**: ✅ COMPLETO  
 **Última Atualização**: 27 de Fevereiro de 2026  
 **Versão**: 1.0.0  
-**Autor**: Kauan Silva
-
+**Autor**: Kauane Silva

@@ -42,13 +42,6 @@
 - ✅ Pipeline CI/CD
 - ✅ Links importantes
 
-**Quando ler**:
-
-- Primeira vez usando o projeto
-- Para apresentar ao chefe/cliente
-- Para portfolio em GitHub
-
----
 
 ### 2. **SETUP.md**
 

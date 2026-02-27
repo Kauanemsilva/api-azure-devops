@@ -291,18 +291,6 @@ Executar:
 
 ```bash
 pytest
-```
-
-## 📝 Próximos Passos
-
-- [ ] Adicionar autenticação (JWT)
-- [ ] Implementar banco de dados (PostgreSQL)
-- [ ] Adicionar testes unitários
-- [ ] Configurar logging
-- [ ] Adicionar rate limiting
-- [ ] Health checks mais completos
-- [ ] Documentação de arquitetura
-- [ ] GitOps com Terraform
 
 ## 🤝 Contribuindo
 
@@ -317,8 +305,7 @@ pytest
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
 
 ## 👤 Autor
-
-**Seu Nome** - [GitHub](https://github.com/seu-usuario)
+Kauane Silva - [GitHub](https://github.com/Kauanemsilva/api-azure-devops)
 
 ---
 
@@ -326,7 +313,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para d
 
 - **API Online**: https://api-azure-devops.azurewebsites.net
 - **Documentação**: https://api-azure-devops.azurewebsites.net/docs
-- **Status da Última Pipeline**: ![Workflow Status](https://github.com/seu-usuario/api-azure-devops/actions/workflows/deploy.yml/badge.svg)
+- **Status da Última Pipeline**: ![Workflow Status](https://github.com/Kauanemsilva/api-azure-devops)
 
 ## 💡 Recursos Adicionais
 
