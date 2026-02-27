@@ -2,8 +2,12 @@ from fastapi import FastAPI, Depends
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database import SessionLocal, User
+from opencensus.ext.azure.log_exporter import AzureLogHandler
+import logging
+import os
 
 app = FastAPI()
+
 
 # Modelo Pydantic para Request/Response
 class UserModel(BaseModel):
@@ -47,3 +51,15 @@ def create_user(user: UserModel, db: Session = Depends(get_db)):
 @app.get("/users")
 def get_users(db: Session = Depends(get_db)):
     return db.query(User).all()
+
+
+# Configurar logging para Azure Monitor
+logger = logging.getLogger(__name__)
+logger.addHandler(
+    AzureLogHandler(
+        connection_string=os.environ["APPLICATIONINSIGHTS_CONNECTION_STRING"]
+    )
+)
+logger.setLevel(logging.INFO)
+
+logger.info("API iniciada com sucesso")
