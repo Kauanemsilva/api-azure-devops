@@ -7,9 +7,14 @@ import os
 import logging
 
 # 🔥 Configura Azure Monitor (Application Insights)
-configure_azure_monitor(
-    connection_string=os.environ.get("APPLICATIONINSIGHTS_CONNECTION_STRING")
-)
+# Só funciona se tiver APPLICATIONINSIGHTS_CONNECTION_STRING no .env
+try:
+    connection_string = os.environ.get("APPLICATIONINSIGHTS_CONNECTION_STRING")
+    if connection_string:
+        configure_azure_monitor(connection_string=connection_string)
+        print("✓ Azure Monitor configurado")
+except Exception as e:
+    print(f"⚠ Azure Monitor não configurado: {e}")
 
 app = FastAPI()
 
