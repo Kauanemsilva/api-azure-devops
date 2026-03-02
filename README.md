@@ -3,7 +3,7 @@
 API REST desenvolvida em **Python com FastAPI**, com **Pipeline CI/CD automática** usando **GitHub Actions** e **Deploy automático na Microsoft Azure**.
 
 <p align="center">
-  <img src="assets/Diagrama sem nome.gif" width="400">
+  <img src="assets/Diagrama sem nome.gif" width="600">
 </p>
 
 ## 📋 Visão Geral
