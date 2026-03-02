@@ -2,6 +2,10 @@
 
 API REST desenvolvida em **Python com FastAPI**, com **Pipeline CI/CD automática** usando **GitHub Actions** e **Deploy automático na Microsoft Azure**.
 
+<p align="center">
+  <img src="assets/Diagrama sem nome.gif" width="400">
+</p>
+
 ## 📋 Visão Geral
 
 Este projeto demonstra uma arquitetura moderna de **Cloud/DevOps** com:
